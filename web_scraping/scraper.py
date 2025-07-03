@@ -5,7 +5,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 from web_scraping.config import (
-    COMBINED_SEARCH_URL,
+    BASE_URL,
     ITEMS_TO_SCRAPE,
     ITEM_HTML_TAG_MAPPING,
     ITEM_HTML_ATTRIBUTE_MAPPING,
@@ -50,13 +50,21 @@ def parse_ad_detail(url: str) -> dict:
     return html_dict
 
 
-if __name__ == "__main__":
-    url = COMBINED_SEARCH_URL
+def get_ads_from_a_single_page(url: str) -> list[dict]:
     soup = get_soup(url)
-    ad_html_list = get_individual_ads_html(soup)
-    combined_html_info_dict_list = []
+    ad_html_list = get_individual_ads_html(soup=soup)
+    html_info_dict_list = []
     for ad_html in ad_html_list:
         ad_detail = parse_ad_detail(ad_html)
-        combined_html_info_dict_list.append(ad_detail)
-    df = pd.DataFrame(combined_html_info_dict_list)
+        html_info_dict_list.append(ad_detail)
+    return html_info_dict_list
+
+
+if __name__ == "__main__":
+    combined_html_info_list = []
+    for page_index in range(20):
+        url = f"{BASE_URL}&page={page_index}"
+        html_info_list = get_ads_from_a_single_page(url=url)
+        combined_html_info_list.extend(html_info_list)
+    df = pd.DataFrame(combined_html_info_list)
     df.to_csv("locanto_ads.csv", index=False)

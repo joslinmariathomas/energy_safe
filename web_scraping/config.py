@@ -1,5 +1,5 @@
 """'
-Lists constants used in the parent folder
+Lists constants and mappings used in the parent folder - web_scraping
 """
 
 from web_scraping.helper_functions import (
@@ -11,7 +11,7 @@ from web_scraping.helper_functions import (
 
 WEBSITE_TO_SCRAPE = "https://www.locanto.com.au/"
 SERVICE_TO_SEARCH = "electricians"
-COMBINED_SEARCH_URL = f"{WEBSITE_TO_SCRAPE}/g/q/?query={SERVICE_TO_SEARCH}"
+BASE_URL = f"{WEBSITE_TO_SCRAPE}/g/q/?query={SERVICE_TO_SEARCH}"
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
