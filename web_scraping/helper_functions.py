@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup, Tag
 
 
+# Functions to find html tags and values from a html url
 def find_by_id(soup: BeautifulSoup, tag: str, value: str | None):
     return soup.find(name=tag, id=value)
 
