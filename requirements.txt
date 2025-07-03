@@ -1,2 +1,7 @@
+beautifulsoup4
+cloudscraper
+datetime
 pandas
-numpy
+black
+flake8
+
