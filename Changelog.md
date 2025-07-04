@@ -1,5 +1,7 @@
 # Changelog
 
+### add_transformer
+- add basic transformations in a new `transform` package
 ### Update-scraper
 - Updated scraper to include extraction date
 ### Pagify_search_pages
