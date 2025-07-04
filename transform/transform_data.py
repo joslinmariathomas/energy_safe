@@ -26,5 +26,7 @@ def get_state_from_coords(lat, lon):
 if __name__ == "__main__":
     df = pd.read_csv(AD_FILE)
     df = clean_data(df)
-    df["state"] = df.apply(lambda row: get_state_from_coords(row["latitude"], row["longitude"]), axis=1)
+    df["state"] = df.apply(
+        lambda row: get_state_from_coords(row["latitude"], row["longitude"]), axis=1
+    )
     df.to_csv("./data/recruitment_ads.csv", index=False)
