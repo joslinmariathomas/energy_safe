@@ -44,7 +44,7 @@ def parse_ad_detail(url: str) -> dict:
             )
             html_dict[item] = cleaned
         except Exception as e:
-            print(f"[OK] {item}")
+            print(f"[Not OK] {item}")
     if html_dict:
         html_dict["extraction_date"] = dt.datetime.now().astimezone().date()
     return html_dict
@@ -67,4 +67,6 @@ if __name__ == "__main__":
         html_info_list = get_ads_from_a_single_page(url=url)
         combined_html_info_list.extend(html_info_list)
     df = pd.DataFrame(combined_html_info_list)
-    df.to_csv("locanto_ads.csv", index=False)
+    df = df.dropna(how="all")
+    df["extraction_date"] = dt.datetime.now().astimezone().date()
+    df.to_csv("./data/locanto_ads.csv", index=False)
