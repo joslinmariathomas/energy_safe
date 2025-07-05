@@ -4,7 +4,7 @@ import datetime as dt
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from web_scraping.config import (
+from electrician_ads_scraping_locanto.web_scraping.config import (
     BASE_URL,
     ITEMS_TO_SCRAPE,
     ITEM_HTML_TAG_MAPPING,
@@ -12,7 +12,9 @@ from web_scraping.config import (
     ITEM_SEARCH_STRATEGY,
     SEARCH_STRATEGIES,
 )
-from web_scraping.helper_functions import cleanup_html_tag
+from electrician_ads_scraping_locanto.web_scraping.helper_functions import (
+    cleanup_html_tag,
+)
 
 
 def get_soup(url: str) -> BeautifulSoup:
