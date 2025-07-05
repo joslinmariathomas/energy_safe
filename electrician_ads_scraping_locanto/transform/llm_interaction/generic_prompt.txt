@@ -3,7 +3,7 @@ You need to respond with 3 fields in json:
  1. recruitment_ad(boolean, If the ad is a job posting) and
  2. legitimate(boolean, If licence is given or if a legitimate hiring asking for licensed electricians.
     Random electricians without license number or who gives unbelievable deals are illegitimate).
- 3. license_number(str,Alpha numeric license number in the format DB729 or N421).
+ 3. license_number(str,Alpha numeric license number in the format DB729 or N421, it would be 4 to 5 characters).
 Examples are given below:
  1. Text : 35 YO fit male offering to repair or install heaters or air conditioners
     (obviously you supply the unit)downlights or anything electrical!

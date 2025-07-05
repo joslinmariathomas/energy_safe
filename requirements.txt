@@ -5,6 +5,8 @@ pandas
 black
 flake8
 geopy
-google-genai
-python-dotenv
-json
+ollama
+matplotlib
+seaborn
+wordcloud
+folium
