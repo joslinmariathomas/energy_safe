@@ -1,5 +1,8 @@
 # Changelog
 
+### make_notebook_trustworthy
+- make notbook trustworthy to display map
+
 ### EDA
 - EDA of locanto ads
 
