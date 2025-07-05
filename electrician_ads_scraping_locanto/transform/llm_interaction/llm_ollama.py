@@ -5,7 +5,6 @@ import ollama
 import os
 
 
-
 def get_generic_prompt():
     """Retrieves the generic prompt which has the guidelines for the llm"""
     script_dir = os.path.dirname(__file__)
@@ -17,11 +16,11 @@ def get_generic_prompt():
 
 def get_llm_response(description: str) -> dict[str, Any]:
     """Combines the description text and prompt and pass it to Ollama LLM
-     to retrieve the required fields"""
+    to retrieve the required fields"""
     generic_prompt = get_generic_prompt()
     combined_prompt = generic_prompt + description
-    client =  ollama.Client()
+    client = ollama.Client()
     model = "gemma3n:latest"
-    response = client.generate(model=model, prompt=combined_prompt,format='json')
+    response = client.generate(model=model, prompt=combined_prompt, format="json")
     response_json = json.loads(response.response)
     return response_json
