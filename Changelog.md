@@ -1,5 +1,8 @@
 # Changelog
 
+### rearrange_folders
+- refactored folders and files
+
 ### extract_info_from_descriptions
 - Extract three key features from the job title and description 
 - `recruitment_ad` :  if it is a service ad or a job posting

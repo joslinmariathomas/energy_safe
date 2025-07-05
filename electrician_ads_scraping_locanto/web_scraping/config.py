@@ -2,7 +2,7 @@
 Lists constants and mappings used in the parent folder - web_scraping
 """
 
-from web_scraping.helper_functions import (
+from electrician_ads_scraping_locanto.web_scraping.helper_functions import (
     find_by_id,
     find_by_class,
     find_by_itemprop,
