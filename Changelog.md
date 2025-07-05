@@ -13,7 +13,7 @@
 - Extract three key features from the job title and description 
 - `recruitment_ad` :  if it is a service ad or a job posting
 - `legitimate` - if it is an ad posted by a legitimate person or company
-- `license_number` - License number if available \
+- `license_number` - License number if available
 
 ### add_gemini_llm_prompt
 - Add llm prompt to extract necessary information from ads
