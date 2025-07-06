@@ -1,7 +1,10 @@
 # Changelog
 
+### Add project 2
+- Add project 2 with logistic regression and random forest
+
 ### make_notebook_trustworthy
-- make notbook trustworthy to display map
+- make notebook trustworthy to display map
 
 ### EDA
 - EDA of locanto ads
