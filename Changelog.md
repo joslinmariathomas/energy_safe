@@ -1,5 +1,8 @@
 # Changelog
 
+### ML_project-_to_identify_fake_ads
+- Fix issues with links in project 1
+
 ### Add project 2
 - Add project 2 with logistic regression and random forest
 
