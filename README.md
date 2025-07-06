@@ -11,7 +11,7 @@ To identify potentially unauthorized electrical service advertisements posted on
 
 ### Data Collection
 - Target Platform: [Locanto Australia](https://www.locanto.com.au)
-- Scraped 420+ advertisements using requests and BeautifulSoup.
+- Scraped 420 advertisements using requests and BeautifulSoup.
 
 ### Extracted Fields
 - Title  
