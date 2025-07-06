@@ -12,6 +12,7 @@ def feature_engineer(df: pd.DataFrame):
 
 
 def tokenize_job_info(df: pd.DataFrame) -> pd.DataFrame:
+    """Generates and appends TF-IDF features from job_info text."""
     tfidf = TfidfVectorizer(
         tokenizer=tokenizer, min_df=0.05, ngram_range=(1, 3), max_features=10000
     )

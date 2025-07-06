@@ -1,4 +1,6 @@
 # Changelog
+### documentation
+- Add doc strings to functions
 
 ### ML_project-_to_identify_fake_ads
 - Fix issues with links in project 1
