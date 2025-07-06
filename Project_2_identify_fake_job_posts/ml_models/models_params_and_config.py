@@ -1,5 +1,5 @@
 from imblearn.over_sampling import SMOTE
-from scipy.stats import randint, uniform, loguniform
+from scipy.stats import randint,loguniform
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest, f_classif

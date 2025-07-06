@@ -2,11 +2,11 @@
 Lists constants and mappings used in the parent folder - web_scraping
 """
 
-from electrician_ads_scraping_locanto.web_scraping.helper_functions import (
+from Project_1_web_scraping.web_scraping.helper_functions import (
     find_by_id,
-    find_by_class,
     find_by_itemprop,
     find_tag_only,
+    find_by_class,
 )
 
 WEBSITE_TO_SCRAPE = "https://www.locanto.com.au/"
