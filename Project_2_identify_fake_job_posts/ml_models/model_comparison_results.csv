@@ -1,0 +1,3 @@
+model,best_score,test_auc,accuracy,precision,recall,f1_score,best_params
+logistic_regression,0.8859855355510596,0.8520173805090006,0.8220338983050848,0.125,0.6888888888888889,0.21160409556313994,"{'logreg__C': np.float64(0.06338653441536259), 'logreg__penalty': 'l2'}"
+random_forest,0.8374171657497242,0.7440631373592268,0.963020030816641,0.4117647058823529,0.15555555555555556,0.22580645161290322,"{'rf__max_depth': 17, 'rf__min_samples_leaf': 1, 'rf__min_samples_split': 2, 'rf__n_estimators': 170}"

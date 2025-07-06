@@ -82,5 +82,7 @@ def process_missing_llm_rows(
 if __name__ == "__main__":
     df = pd.read_csv("data/recruitment_ads.csv")
     df = clean_data(df)
-    df["state"] = df.apply(lambda row: get_state_from_coords(row["latitude"], row["longitude"]), axis=1)
+    df["state"] = df.apply(
+        lambda row: get_state_from_coords(row["latitude"], row["longitude"]), axis=1
+    )
     process_missing_llm_rows(df, batch_size=20)
