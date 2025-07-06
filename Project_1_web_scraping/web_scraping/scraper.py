@@ -16,6 +16,7 @@ from Project_1_web_scraping.web_scraping.helper_functions import cleanup_html_ta
 
 
 def get_soup(url: str) -> BeautifulSoup:
+    """Fetches and parses HTML content from a URL using a scraper."""
     scraper = cloudscraper.create_scraper()
     res = scraper.get(url, timeout=60)
     soup = BeautifulSoup(res.text, "html.parser")
@@ -23,12 +24,14 @@ def get_soup(url: str) -> BeautifulSoup:
 
 
 def get_individual_ads_html(soup: BeautifulSoup) -> list[str]:
+    """Extracts individual ad URLs from the soup object."""
     ads_list = list(soup.select("a[href*='ID_']"))
     ads_html_list = [link["href"] for link in ads_list]
     return ads_html_list
 
 
 def parse_ad_detail(url: str) -> dict:
+    """Scrapes and parses the details of a single ad page."""
     print(f"[+] Scraping: {url}")
     soup = get_soup(url)
     html_dict = {}
@@ -51,6 +54,7 @@ def parse_ad_detail(url: str) -> dict:
 
 
 def get_ads_from_a_single_page(url: str) -> list[dict]:
+    """Collects ad details from all listings on a single search result page."""
     soup = get_soup(url)
     ad_html_list = get_individual_ads_html(soup=soup)
     html_info_dict_list = []

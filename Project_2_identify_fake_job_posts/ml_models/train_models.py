@@ -20,6 +20,7 @@ from Project_2_identify_fake_job_posts.ml_models.models_params_and_config import
 
 
 def train_test_split_df(df: pd.DataFrame):
+    """Splits the feature-engineered dataset into stratified train and test sets."""
     df_tfidf = feature_engineer(df)
     target = df_tfidf.fraudulent
     features = df_tfidf.drop(["fraudulent"], axis=1)
@@ -30,6 +31,7 @@ def train_test_split_df(df: pd.DataFrame):
 
 
 def run_ml_models():
+    """Trains, tunes, evaluates multiple ML models and compares their performance."""
     df = pd.read_csv("../raw_data/fake_job_postings.csv")
     X_train, X_test, y_train, y_test = train_test_split_df(df)
     results = []
